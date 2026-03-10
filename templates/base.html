@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dashboard | Paddock Brasil{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- MDI Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-brand">
+                <i class="mdi mdi-checkerboard"></i>
+                <span>Paddock<br>Brasil</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li>
+                    <a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">
+                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('pilotos') }}" class="{% if request.endpoint == 'pilotos' %}active{% endif %}">
+                        <i class="mdi mdi-account-racing-outline"></i>
+                        <span>Pilotos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('equipes') }}" class="{% if request.endpoint == 'equipes' %}active{% endif %}">
+                        <i class="mdi mdi-car-sports"></i>
+                        <span>Equipes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('corridas') }}" class="{% if request.endpoint == 'corridas' %}active{% endif %}">
+                        <i class="mdi mdi-calendar-clock-outline"></i>
+                        <span>Calendário</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('circuitos') }}" class="{% if request.endpoint == 'circuitos' %}active{% endif %}">
+                        <i class="mdi mdi-road-variant"></i>
+                        <span>Circuitos</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <p>Data provided by Ergast API Mirror</p>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>{% block page_title %}Overview{% endblock %}</h1>
+                    <p class="subtitle">{% block page_subtitle %}Temporada 2024{% endblock %}</p>
+                </div>
+                <!-- Extra header actions can go here -->
+            </header>
+            
+            <div class="content-wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

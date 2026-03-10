@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | Paddock Brasil{% endblock %}
+
+{% block page_title %}Paddock Overview{% endblock %}
+{% block page_subtitle %}Temporada Reais com Ergast API Integration{% endblock %}
+
+{% block content %}
+<div class="dashboard-hub">
+    <!-- Row 1: Main Highlight -->
+    <div class="grid-container grid-cols-2 mb-lg">
+        <div id="last-race-widget">
+            <!-- Dynamic Content -->
+        </div>
+        <div class="card promo-card">
+            <div class="promo-content">
+                <h2>Paddock Brasil</h2>
+                <p>Acompanhe em tempo real as estatísticas da categoria rainha do automobilismo com nosso dashboard interativo.</p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="val">20</span>
+                        <span class="lab">Pilotos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="val">10</span>
+                        <span class="lab">Equipes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="val">24</span>
+                        <span class="lab">Etapas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Navigation Grid -->
+    <h2 class="section-title">Acesso Rápido</h2>
+    <div class="grid-container grid-cols-4">
+        <a href="{{ url_for('pilotos') }}" class="card interactive ghost-card">
+            <i class="mdi mdi-account-group icon-red"></i>
+            <h3>Pilotos</h3>
+            <p>Classificação e Perfis</p>
+        </a>
+        <a href="{{ url_for('equipes') }}" class="card interactive ghost-card">
+            <i class="mdi mdi-car-sports icon-red"></i>
+            <h3>Equipes</h3>
+            <p>Construtores e Pontos</p>
+        </a>
+        <a href="{{ url_for('corridas') }}" class="card interactive ghost-card">
+            <i class="mdi mdi-flag-checkered icon-red"></i>
+            <h3>Calendário</h3>
+            <p>Datas e Horários</p>
+        </a>
+        <a href="{{ url_for('circuitos') }}" class="card interactive ghost-card">
+            <i class="mdi mdi-road-variant icon-red"></i>
+            <h3>Circuitos</h3>
+            <p>Layouts e Traçados</p>
+        </a>
+    </div>
+</div>
+
+<style>
+    .mb-lg { margin-bottom: 2.5rem; }
+    .section-title { margin-bottom: 1.5rem; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); }
+    
+    .promo-card {
+        background: linear-gradient(135deg, var(--color-f1-red) 0%, #a00400 100%);
+        border: none;
+        color: white;
+        justify-content: center;
+    }
+    .promo-content h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .promo-content p { opacity: 0.9; margin-bottom: 2rem; max-width: 400px; line-height: 1.6; }
+    
+    .stats-row { display: flex; gap: 2rem; }
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-item .val { font-size: 1.8rem; font-weight: 800; }
+    .stat-item .lab { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
+
+    .badge { background: var(--color-f1-red); color: white; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; }
+    .highlight { color: var(--color-f1-red); font-weight: 800; font-size: 1.8rem; margin: 0.5rem 0; }
+    .team { color: var(--color-text-muted); font-size: 1rem; text-transform: uppercase; }
+    .race-meta { margin-top: 2rem; display: flex; gap: 1.5rem; color: var(--color-text-muted); font-size: 0.9rem; }
+    
+    .ghost-card { text-align: center; padding: 2.5rem 1.5rem; }
+    .ghost-card i { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .icon-red { color: var(--color-f1-red); }
+</style>
+{% endblock %}

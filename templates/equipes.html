@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Equipes | Paddock Brasil{% endblock %}
+
+{% block page_title %}Construtores{% endblock %}
+{% block page_subtitle %}Escuderias da Fórmula 1{% endblock %}
+
+{% block content %}
+<div id="equipes-grid" class="grid-container grid-cols-3">
+    <!-- Dynamic items from script.js -->
+</div>
+
+<style>
+    .card-footer-info {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--color-border);
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .highlight { font-size: 1.6rem; }
+</style>
+{% endblock %}

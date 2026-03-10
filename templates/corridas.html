@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Calendário | Paddock Brasil{% endblock %}
+
+{% block page_title %}Calendário de Corridas{% endblock %}
+{% block page_subtitle %}Datas e Locais das Etapas{% endblock %}
+
+{% block content %}
+<div id="calendar-list" class="grid-container grid-cols-2">
+    <!-- Dynamic items from script.js -->
+</div>
+
+<style>
+    .flex-row {
+        flex-direction: row !important;
+        align-items: center;
+        gap: 2rem;
+    }
+    .race-date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 80px;
+        height: 80px;
+        background: var(--color-surface-hover);
+        border-radius: var(--radius-md);
+        border-left: 3px solid var(--color-f1-red);
+    }
+    .race-date .day { font-size: 1.5rem; font-weight: 800; line-height: 1; }
+    .race-date .month { font-size: 0.75rem; text-transform: uppercase; font-weight: 600; color: var(--color-f1-red); }
+    
+    .circuit-name {
+        display: block;
+        margin-top: 1rem;
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+    }
+    .circuit-name i { color: var(--color-f1-red); }
+</style>
+{% endblock %}
