@@ -10,10 +10,14 @@ A aplicação utiliza Python com Flask no backend e HTML, CSS e JavaScript puro 
 
 <img width="1337" height="615" alt="image" src="https://github.com/user-attachments/assets/abcd7049-9c10-4651-ad22-ac563a2dc2b7" />
 
+<img width="1317" height="617" alt="image" src="https://github.com/user-attachments/assets/63993a59-5d09-4ff4-a119-eb7b5980e5d3" />
 
-/screenshots/dashboard.png
-/screenshots/pilotos.png
-/screenshots/calendario.png
+<img width="1326" height="615" alt="image" src="https://github.com/user-attachments/assets/b5407105-b722-47d3-a55a-e71a5e20a5f8" />
+
+<img width="1325" height="623" alt="image" src="https://github.com/user-attachments/assets/a690d025-1ef8-48f7-8a68-440531a589e8" />
+
+<img width="1324" height="618" alt="image" src="https://github.com/user-attachments/assets/920cc44e-725a-4640-b44a-b71efa0987a4" />
+
 
 APIs e Recursos
 
