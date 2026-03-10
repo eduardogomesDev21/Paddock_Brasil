@@ -8,7 +8,8 @@ A aplicação utiliza Python com Flask no backend e HTML, CSS e JavaScript puro 
 
 🚀 Preview
 
-(adicione aqui prints do projeto)
+<img width="1337" height="615" alt="image" src="https://github.com/user-attachments/assets/abcd7049-9c10-4651-ad22-ac563a2dc2b7" />
+
 
 /screenshots/dashboard.png
 /screenshots/pilotos.png
